@@ -22,6 +22,7 @@ require("lasso").configure({
 // Enable hot reloading in development
 if (!isProduction) {
   require("marko/hot-reload").enable();
+  require("marko/browser-refresh").enable();
   var watcher = chokidar.watch(["app/", "app/components/*"], {
     ignored: /(^|[\/\\])\../,
     persistent: true
