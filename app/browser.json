@@ -1,0 +1,3 @@
+{
+  "dependencies": ["./css/app.scss", "./css/bulma_custom.scss"]
+}
