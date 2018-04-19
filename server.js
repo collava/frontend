@@ -7,7 +7,7 @@ var compression = require("compression"); // Provides gzip compression for the H
 var app = express();
 var isProduction = process.env.NODE_ENV === "production";
 var log = console.log.bind(console);
-// Configure lasso to control how JS/CSS/etc. is delivered to the browser
+
 require("lasso").configure({
   plugins: [
     "lasso-marko", // Allow Marko templates to be compiled and transported to the browser
@@ -19,15 +19,13 @@ require("lasso").configure({
   fingerprintsEnabled: isProduction // Only add fingerprints to URLs in production
 });
 
+// Enable hot reloading in development
 if (!isProduction) {
-  // Enable hot reloading in development
   require("marko/hot-reload").enable();
   var watcher = chokidar.watch(["app/", "app/components/*"], {
     ignored: /(^|[\/\\])\../,
     persistent: true
   });
-
-  console.log("Em dev");
 
   watcher.on("change", file => {
     log(`File ${file} has been changed`);
@@ -36,17 +34,6 @@ if (!isProduction) {
       require("marko/hot-reload").handleFileModified(file);
     }
   });
-  //   require("fs").watch(viewsDir, function(event, filename) {
-  //   if (/\.marko$/.test(filename)) {
-  //     // Resolve the filename to a full template path:
-  //     var templatePath = path.join(viewsDir, filename);
-
-  //     console.log("Marko template modified: ", templatePath);
-
-  //     // Pass along the *full* template path to marko
-  //     require("marko/hot-reload").handleFileModified(templatePath);
-  //   }
-  // });
 }
 
 var port = process.env.PORT || 8111;
