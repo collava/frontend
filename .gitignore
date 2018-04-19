@@ -59,6 +59,9 @@ typings/
 
 # next.js build output
 .next
-.cache
+.cache/
 .vscode
-static
+static/
+*.marko.js
+*.dust.js
+*.coffee.js
