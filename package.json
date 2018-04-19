@@ -3,19 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "brunch watch --server",
-    "build": "brunch build --production"
+    "start": "browser-refresh server.js"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015-ie": "^6.7.0",
-    "brunch": "^2.10.12",
+    "browser-refresh": "^1.7.2",
+    "browser-refresh-taglib": "^1.1.0",
     "bulma": "^0.7.1",
+    "chokidar": "^2.0.3",
     "font-awesome": "^4.7.0",
-    "javascript-brunch": "^2.10.0",
     "node-sass": "^4.8.3",
-    "postcss-cli": "^5.0.0",
-    "sass-brunch": "^2.10.4"
+    "postcss-cli": "^5.0.0"
+  },
+  "dependencies": {
+    "@lasso/marko-taglib": "^1.0.10",
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "lasso": "^3.1.4",
+    "lasso-marko": "^2.4.0",
+    "lasso-sass": "^3.0.0",
+    "marko": "^4.9.6"
   }
 }

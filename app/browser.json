@@ -1,0 +1,7 @@
+{
+  "dependencies": [
+    "./css/app.scss",
+    "./css/bulma_custom.scss"
+    // "require: ./components/app/index.marko" // dependencies
+  ]
+}
