@@ -34,7 +34,7 @@ function render(input, out, __component, component, state) {
 
   lasso_head_tag({}, out, __component, "6");
 
-  out.w("</head><body>");
+  out.w("</head></html><body>");
 
   component_globals_tag({}, out);
 
@@ -52,7 +52,9 @@ function render(input, out, __component, component, state) {
 
   await_reorderer_tag({}, out, __component, "17");
 
-  out.w("</body></html>");
+  out.w("</body>");
+
+  __component.___flags |= 2;
 }
 
 marko_template._ = marko_renderer(render, {

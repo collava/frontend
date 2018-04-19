@@ -25,11 +25,11 @@ function render(input, out, __component, component, state) {
 
   out.w("<div class=\"count\">" +
     marko_escapeXml(state.count) +
-    "</div><button class=\"example-button\"" +
+    "</div><button class=\"button\"" +
     marko_attr("data-marko", {
       onclick: __component.d("increment", false)
     }, false) +
-    ">Click me!</button>");
+    ">Click me!!</button>");
 }
 
 marko_template._ = marko_renderer(render, {

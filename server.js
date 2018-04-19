@@ -30,7 +30,6 @@ if (!isProduction) {
   watcher.on("change", file => {
     log(`File ${file} has been changed`);
     if (/\.marko$/.test(file)) {
-      // Pass along the *full* template path to marko
       require("marko/hot-reload").handleFileModified(file);
     }
   });

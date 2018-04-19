@@ -28,10 +28,12 @@ function render(input, out, __component, component, state) {
   out.w("<div>");
 
   if (state.mounted) {
-    out.w("<p>UI component successfully mounted!s</p>");
-  }
+    out.w("<p>UI component successfully mounted!");
 
-  click_count_tag({}, out, __component, "2");
+    click_count_tag({}, out, __component, "2");
+
+    out.w("</p>");
+  }
 
   out.w("</div>");
 }
