@@ -17,7 +17,7 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     marko_renderer = components_helpers.r,
     marko_defineComponent = components_helpers.c,
     marko_loadTemplate = require("marko/src/runtime/helper-loadTemplate"),
-    click_count_template = marko_loadTemplate(require.resolve("../click-count")),
+    click_count_template = marko_loadTemplate(require.resolve("../click-count.marko")),
     marko_helpers = require("marko/src/runtime/html/helpers"),
     marko_loadTag = marko_helpers.t,
     click_count_tag = marko_loadTag(click_count_template);
@@ -48,6 +48,6 @@ marko_template.meta = {
     id: "/simple-brunch$0.1.0/app/components/app/index.marko",
     component: "./",
     tags: [
-      "../click-count"
+      "../click-count.marko"
     ]
   };

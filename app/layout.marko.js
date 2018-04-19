@@ -38,7 +38,7 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<section class=\"section\"><div class=\"container\"><h1 class=\"title\">Hello Worlds</h1><p class=\"subtitle\">My first website with <strong>Bulma</strong>!!</p></div></section><section class=\"section\">");
+  out.w("<section class=\"section\"><div class=\"container\"><h1 class=\"title\">Hello Worlds</h1><p class=\"subtitle\">My first website with<strong> Bulma !!!</strong></p></div></section><section class=\"section\">");
 
   app_tag({}, out, __component, "14");
 
